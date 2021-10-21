@@ -17,12 +17,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
 
 from main.models import StreetModel
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', ListView.as_view(model=StreetModel, template_name='index.html'), name='index'),
-    path('<slug:slug>', DetailView.as_view(model=StreetModel, template_name='street.html'), name='street_detail'),
+    path('about/', TemplateView.as_view(template_name='about.html'), name="about"),
+    path('streets/<slug:slug>', DetailView.as_view(model=StreetModel, template_name='street.html'), name='street_detail'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

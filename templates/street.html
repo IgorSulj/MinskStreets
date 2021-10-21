@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>{{ object.name }}</h1>
-<img src="{{ object.man_photo.url }}" alt="" height="400px">
-<p>{{ object.description }}</p>
-<h2>Фото улицы</h2>
-{% for photo in object.photos.all %}
-    <img src="{{ photo.img.url }}" alt="">
-{% endfor %}
-
-</body>
-</html>
+{% load static %}
+{% include 'base.html' %}
+{% block content %}
+    <section>
+      <div class="wrapper">
+        <h2 class="title">{{ object.name }}</h2>
+        <div class="citizen-container">
+          <div class="citizen-info">
+            {{ object.description | linebreaks }}
+          </div>
+          <div class="citizen-photo">
+            <img src="{{ object.man_photo.url }}" alt="{{ object.man_name }}" />
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
