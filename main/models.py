@@ -15,6 +15,9 @@ class StreetModel(models.Model):
         verbose_name = 'Улица'
         verbose_name_plural = 'Улицы'
 
+    def __str__(self):
+        return self.name
+
 
 class StreetPhoto(models.Model):
     street = models.ForeignKey(StreetModel, on_delete=models.CASCADE, verbose_name='Улица', related_name='photos')

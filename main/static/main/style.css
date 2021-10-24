@@ -79,6 +79,13 @@ h2.title::after {
   margin-bottom: 30px;
   line-height: 150%;
 }
+.citizen-photo {
+    align-self: flex-start;
+    height: 300px;
+}
+.citizen-photo img {
+    height: 100%;
+}
 p {
   padding: 1%;
   line-height: 150%;
