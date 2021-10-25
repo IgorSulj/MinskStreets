@@ -1,5 +1,10 @@
-{% load static %}
-{% include 'base.html' %}
+{% extends 'base.html' %}
+{% block head %}
+    <link
+            href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap"
+            rel="stylesheet"
+    />
+{% endblock %}
 {% block content %}
     <section>
         <div class="wrapper">
@@ -27,14 +32,14 @@
             ></script>
         </div>
     </section>
-{#    <section>#}
-{#        <div class="wrapper">#}
-{#            <h2 class="title">Фотографии</h2>#}
-{#            <div class="photo__inner">#}
-{#                {% for photo in object.photos.all %}#}
-{#                    <img src="{{ photo.img.url }}" alt="{{ photo.name }}"/>#}
-{#                {% endfor %}#}
-{#            </div>#}
-{#        </div>#}
-{#    </section>#}
+    <section>
+        <div class="wrapper">
+            <h2 class="title">Фотографии</h2>
+            <div class="street__photos">
+                {% for photo in object.photos.all %}
+                    <img src="{{ photo.img.url }}" alt="{{ photo.name }}"/>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 {% endblock %}

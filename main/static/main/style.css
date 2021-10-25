@@ -5,6 +5,35 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  background: url("bg06.png");
+}
+span.bold {
+  font-weight: bold;
+}
+#main-bg {
+  background: url("Minsk-Gates.webp") no-repeat center / cover;
+  background-attachment: fixed;
+  position: relative;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+#main-bg h1 {
+  font-size: 60px;
+  text-align: center;
+}
+#main-bg .authors {
+  text-align: start;
+  position: absolute;
+  right: 2%;
+  bottom: 3%;
+}
 nav {
   position: sticky;
   z-index: 3000;
@@ -24,7 +53,7 @@ nav ul li {
   list-style: none;
 }
 nav ul li a {
-  padding: 20px 60px;
+  padding: 18px 50px;
   text-decoration: none;
   color: #fff;
 }
@@ -38,6 +67,13 @@ section {
   max-width: 1600px;
   padding: 2%;
   margin: 0 auto;
+}
+.wrapper p a {
+  text-decoration: none;
+  color: #d63939;
+}
+.wrapper p a:hover {
+  text-decoration: underline;
 }
 .wrapper ul {
   margin: 20px;
@@ -79,12 +115,14 @@ h2.title::after {
   margin-bottom: 30px;
   line-height: 150%;
 }
-.citizen-photo {
-    align-self: flex-start;
-    height: 300px;
+.citizen-info p:first-child::first-letter {
+  font-size: 60px;
+  font-family: "Marck Script", cursive;
+  color: #ff5151;
+  text-transform: uppercase;
 }
-.citizen-photo img {
-    height: 100%;
+.citizen-photo {
+  align-self: flex-start;
 }
 p {
   padding: 1%;
@@ -112,6 +150,23 @@ p {
   height: 270px;
   margin: 20px 50px;
 }
+.street__photos {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.street__photos img {
+  width: 270px;
+  height: 200px;
+  margin: 20px 10px;
+}
+.street__photos img:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.3s;
+}
 .photo__inner p {
   margin-top: -20px;
   text-align: center;
@@ -120,4 +175,72 @@ p {
   transition: 0.3s;
   opacity: 0.5;
   cursor: pointer;
+}
+.citizen-photo {
+  align-self: flex-start;
+}
+.citizen-photo img {
+  width: 300px;
+  height: 420px;
+}
+footer {
+  background: #ff5151;
+  color: #fff;
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 100%); */
+  padding: 2%;
+}
+/* footer p:first-child {
+  margin-top: 30px;
+} */
+footer p {
+  text-align: center;
+  padding: 0;
+}
+
+/*                     adaptive                      */
+
+@media (max-width: 768px) {
+  nav ul li a {
+    padding: 18px 2px;
+  }
+  nav ul {
+    width: 100%;
+    justify-content: space-around;
+  }
+  h2.title {
+    font-size: calc(20px + 20 * (100vw / 1440));
+  }
+  #main-bg h1 {
+    font-size: calc(30px + 20 * (100vw / 1440));
+  }
+  .photo__inner {
+    width: 100%;
+  }
+  .photo__inner img {
+    margin: 20px 30px;
+    width: 120px;
+    height: 170px;
+  }
+  .street__photos {
+    width: 100%;
+  }
+  .citizen-photo img {
+    width: 150px;
+    height: 210px;
+  }
+}
+@media (max-width: 500px) {
+  .citizen-container {
+    flex-direction: column;
+  }
+  .citizen-photo {
+    order: -1;
+    margin: 0 auto;
+  }
 }

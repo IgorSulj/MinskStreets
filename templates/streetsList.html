@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section>
+        <div class="wrapper">
+            <h2 class="title">Их именами названы улицы Минска</h2>
+
+            <p style="text-align: center">
+                Многие улицы Минска носят имена зарубежных и белорусских писателей и
+                поэтов, художников, композиторов, артистов. Одни улицы получили своё
+                название ещё в довоенные годы, другие – после Великой Отечественной
+                войны, а третьи – после обретения независимости Республики Беларусь, в
+                1991 году и в более позднее время, благодаря работе Топонимической
+                комиссии Минского горисполкома. Сколько же подарил город Минск улиц
+                своим прославленным минчанам?
+            </p>
+            <div class="photo__inner">
+                {% for object in object_list %}
+                    <div class="photo__block">
+                        <a href="{% url "street_detail" object.slug %}"
+                        ><img src="{{ object.man_photo.url }}" alt="{{ object.man_name }}"
+                        /></a>
+                        <p>{{ object.man_name }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
