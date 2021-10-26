@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Имена минчан на карте Минска</title>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -17,11 +18,10 @@
 <body>
 <nav>
     <ul>
-        <li><a href="{% url "about" %}">О проекте</a></li>
-        <li><a href="{% url "index" %}">Главная</a></li>
-        <li>
-            <a href="{% url "streets" %}">Их имена носят улицы Минска</a>
-        </li>
+        {% for name, nav_url in nav_urls %}
+            <li><a href="{{ nav_url }}" {% if nav_url == request.path %}class="_active-link"{% endif %}
+            >{{ name }}</a></li>
+        {% endfor %}
     </ul>
 </nav>
 {% block content %}{% endblock %}
