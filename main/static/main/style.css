@@ -12,7 +12,7 @@ span.bold {
   font-weight: bold;
 }
 #main-bg {
-  background: url("Minsk-GatesColor.png") no-repeat center / cover;
+  background: url("Minsk-GatesColor.webp") no-repeat center / cover;
   background-attachment: fixed;
   position: relative;
   height: 100vh;
