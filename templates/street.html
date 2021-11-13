@@ -37,10 +37,12 @@
         <div class="wrapper">
             <h2 class="title">Фотографии</h2>
             <div class="street__photos">
+            <div class="shadowbox"></div>
                 {% for photo in object.photos.all %}
-                    <img src="{{ photo.img.url }}" alt="{{ photo.name }}"/>
+                    <img src="{{ photo.img.url }}" alt="{{ photo.name }}" onclick="zoom('{{ photo.id }}')" id="{{ photo.id }}"/>
                 {% endfor %}
             </div>
         </div>
     </section>
+    <script src="{% static 'main/script.js' %}"></script>
 {% endblock %}
