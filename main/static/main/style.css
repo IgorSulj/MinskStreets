@@ -10,6 +10,12 @@
   font-weight: 600;
   src: url("Montserrat-SemiBold.ttf");
 }
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  src: url("Montserrat-Bold.ttf");
+}
 * {
   margin: 0;
   padding: 0;
