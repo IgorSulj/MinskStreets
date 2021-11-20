@@ -250,11 +250,6 @@ footer p {
 }
 
 /*                     adaptive                      */
-@media (max-width: 1080px) {
-  #main-bg {
-    background-image: url("Minsk-GatesColor1080px.webp");
-  }
-}
 
 @media (max-width: 768px) {
   nav ul li a {
@@ -266,9 +261,6 @@ footer p {
   }
   h2.title {
     font-size: calc(20px + 20 * (100vw / 1440));
-  }
-  #main-bg {
-    background-image: url("Minsk-GatesColor768px.webp");
   }
   #main-bg h1 {
     font-size: calc(30px + 20 * (100vw / 1440));
@@ -293,9 +285,6 @@ footer p {
   }
 }
 @media (max-width: 500px) {
-  #main-bg {
-    background-image: url("Minsk-GatesColor500px.webp");
-  }
   .citizen-container {
     flex-direction: column;
   }
