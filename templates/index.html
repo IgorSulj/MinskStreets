@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block head %}
+    <link rel="preload" href="https://minskstreets.pythonanywhere.com/static/main/MinskStreets.kml">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=421fc08f-b74d-4675-99d8-a4798bad777c&lang=ru_RU&mode=release&load=Map,Placemark,geoXml.load"
+            type="text/javascript"></script>
+{% endblock %}
 {% block content %}
     <section id="main-bg">
         <h1>Имена минчан на карте Минска</h1>
@@ -20,13 +25,8 @@
                 работе Топонимической комиссии Минского горисполкома. Сколько же
                 подарил город Минск улиц своим прославленным минчанам?
             </p>
-            <div class="map">
-                <script
-                        type="text/javascript"
-                        charset="utf-8"
-                        async
-                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af58815209f33d1ba988b5df2277a2921887919ecafced12c549f326a35d5ab32&amp;width=850&amp;height=420&amp;lang=ru_RU&amp;scroll=true"
-                ></script>
+            <div class="wrapper__map">
+                <div id="map"></div>
             </div>
         </div>
     </section>
@@ -62,4 +62,5 @@
             </p>
         </div>
     </section>
+    <script src="{% static "main/index_map.js" %}"></script>
 {% endblock %}
