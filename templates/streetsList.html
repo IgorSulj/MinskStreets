@@ -9,8 +9,8 @@
                     <div class="photo__block">
                         <a href="{% url "street_detail" object.slug %}"
                         ><img src="{{ object.man_photo.url }}" alt="{{ object.man_name }}"
-                        /></a>
-                        <p>{{ object.man_name }}</p>
+                        /><p>{{ object.man_name }}</p></a>
+                        
                     </div>
                 {% endfor %}
             </div>
