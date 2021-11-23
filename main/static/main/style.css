@@ -289,9 +289,6 @@ footer p {
   #main-bg h1 {
     font-size: calc(30px + 20 * (100vw / 1440));
   }
-  #main-bg {
-    background: url("MinskMobile.jpg") no-repeat center / cover;
-  }
   .photo__inner {
     width: 100%;
   }
