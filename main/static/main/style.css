@@ -168,9 +168,9 @@ p {
   align-items: center;
 }
 #map {
-  width: 850px;
   height: 420px;
-  max-width: 100vw;
+  max-width: 100%;
+  display: flex;
 }
 .photo__inner {
   width: 75%;
