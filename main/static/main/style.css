@@ -30,7 +30,7 @@ span.bold {
   font-weight: bold;
 }
 #main-bg {
-  background: url("Minsk-GatesColor.webp") no-repeat center / cover;
+  background: url("Minsk.jpg") no-repeat center / cover;
   background-attachment: fixed;
   position: relative;
   height: 100vh;
@@ -49,7 +49,6 @@ span.bold {
   animation: fadeIn 1.5s linear;
   overflow-y: hidden;
 }
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -99,11 +98,11 @@ section {
   padding: 2%;
   margin: 0 auto;
 }
-.wrapper p a {
+.wrapper a {
   text-decoration: none;
   color: #d63939;
 }
-.wrapper p a:hover {
+.wrapper a:hover {
   text-decoration: underline;
 }
 .wrapper ul {
@@ -143,7 +142,6 @@ h2.title::after {
 }
 .citizen-info p {
   padding: 2%;
-  margin-bottom: 30px;
   line-height: 150%;
 }
 .citizen-info p:first-child::first-letter {
@@ -154,6 +152,9 @@ h2.title::after {
 }
 .citizen-photo {
   align-self: flex-start;
+  position: sticky;
+  top: 60px;
+  margin-bottom: 120px;
 }
 p {
   padding: 1%;
@@ -186,6 +187,7 @@ p {
 }
 .photo__block {
   animation: citizensFadeIn 1s linear;
+  text-align: center;
 }
 @keyframes citizensFadeIn {
   0% {
@@ -286,6 +288,9 @@ footer p {
   #main-bg h1 {
     font-size: calc(30px + 20 * (100vw / 1440));
   }
+  #main-bg {
+    background: url("MinskMobile.jpg") no-repeat center / cover;
+  }
   .photo__inner {
     width: 100%;
   }
@@ -313,7 +318,7 @@ footer p {
     order: -1;
     margin: 0 auto;
   }
-    .street__photos img.zoomed {
+  .street__photos img.zoomed {
     transform: scale(1);
   }
   nav ul li a {
