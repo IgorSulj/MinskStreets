@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
-    <link rel="preload" href="https://minskstreets.pythonanywhere.com/static/main/MinskStreets.kml">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=421fc08f-b74d-4675-99d8-a4798bad777c&lang=ru_RU&mode=release&load=Map,Placemark,geoXml.load"
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=421fc08f-b74d-4675-99d8-a4798bad777c&lang=ru_RU&mode=debug&load=Map,GeoObject,control.ZoomControl"
             type="text/javascript"></script>
 {% endblock %}
 {% block content %}
