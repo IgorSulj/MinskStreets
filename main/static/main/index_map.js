@@ -133,22 +133,6 @@ let map_data = [{
     }
 }]
 
-// let color_to_icon = {
-//     "#ed4543": "islands#redCircleIcon",
-//     "#e6761b": "islands#darkOrangeCircleIcon",
-//     "#ff931e": "islands#orangeCircleIcon",
-//     "#ffd21e": "islands#yellowCircleIcon",
-//     "#f371d1": "islands#pinkCircleIcon",
-//     "#0e4779": "islands#nightCircleIcon",
-//     "#177bc9": "islands#darkBlueCircleIcon",
-//     "#1e98ff": "islands#blueCircleIcon",
-//     "#82cdff": "islands#lightBlueCircleIcon",
-//     "#595959": "islands#blackCircleIcon",
-//     "#97a100": "islands#oliveCircleIcon",
-//     "#b3b3b3": "islands#grayCircleIcon",
-//    
-// }
-
 ymaps.ready(() => {
     let map = new ymaps.Map("map", {
         center: [53.902284, 27.561831],
